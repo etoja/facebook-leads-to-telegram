@@ -31,7 +31,7 @@ app.post('/webhook', async (req, res) => {
     if (!leadgen_id) return res.sendStatus(200);
 
     // Получаем данные из лида
-    const pageAccessToken = 'YOUR_PAGE_ACCESS_TOKEN'; // подставь позже
+    const pageAccessToken = 'EAARCpWHOTWIBO85g0Jzx60QX10Qjc3YM5SAmymJH6TzZAx39t5Knvsa6Umkl0gfrbObEaihQVPPffpTAHpzQqBCapUJnuSk8uNlZCeQwtAFGubeaGnj5T4IEuLguX8sf03XZBTodXeQeSwMHrMwO5ikOeVawDiTN4B1E9HI6fY9Lgu8PPYUCnSWTSz2obISZCjnRojU4ucb4CxL6ar8zBFIm57TFOUuX3bOBxyQECvWqmskZD'; // подставь позже
     const leadRes = await axios.get(`https://graph.facebook.com/v18.0/${leadgen_id}?access_token=${pageAccessToken}`);
 
     const fields = leadRes.data?.field_data || [];
